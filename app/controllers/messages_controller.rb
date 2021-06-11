@@ -10,7 +10,10 @@ class MessagesController < ApplicationController
     message.save!
     # redirect_to root_url
 
-
+    respond_to do |format|
+      format.html { redirect_to root_url }
+      format.json { render json: message }
+    end
   end
 
   def message_params

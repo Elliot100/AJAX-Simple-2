@@ -652,3 +652,385 @@ Completed 200 OK in 2055ms (Views: 54.1ms | ActiveRecord: 0.1ms)
 
 
 Started GET "/assets/bundle.self-9ad3ecc1ddf25a53a095bedcc013db96f6f678a39a009eb87b82c3f69a7ade00.js?body=1" for ::1 at 2021-06-11 11:29:57 -0700
+
+
+Started GET "/" for ::1 at 2021-06-11 11:36:55 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2059ms (Views: 57.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-ab3abf2b42404c7fdc23390927c1ab60048af7e630e3c31707921c268820cf50.js?body=1" for ::1 at 2021-06-11 11:36:57 -0700
+
+
+Started POST "/messages" for ::1 at 2021-06-11 11:37:02 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"583YpwS1j2CP3IzGSJhAbzN2fPsmldEYz//H4cZFoFY/b3iujaQcm+XrCs1ccS1ZheVx8rqtnfd8EA8nwEd8TQ==", "message"=>{"author"=>"elliot", "text"=>"fewa"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["author", "elliot"], ["text", "fewa"], ["created_at", "2021-06-11 18:37:04.889915"], ["updated_at", "2021-06-11 18:37:04.889915"]]
+  [1m[36m (14.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 2025ms (ActiveRecord: 14.4ms)
+
+ActionView::MissingTemplate (Missing template messages/create, application/create with {:locale=>[:en], :formats=>[:json, :js, :html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/elly/Desktop/App Academy/Javascript/JS Fundamentals/AJAX/chat_demo/app/views"
+):
+  actionview (4.2.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.8) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.8) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.8) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.8) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.8) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.8) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.8) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.8) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/elly/.rbenv/versions/2.5.1/lib/ruby/2.5.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.8) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.8) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.8) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.8) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.8) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.8) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.8) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.8) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.8) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.8) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.8) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+  puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+  puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+  puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+  puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/elly/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.2ms)
+
+
+Started POST "/messages" for ::1 at 2021-06-11 11:37:04 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"583YpwS1j2CP3IzGSJhAbzN2fPsmldEYz//H4cZFoFY/b3iujaQcm+XrCs1ccS1ZheVx8rqtnfd8EA8nwEd8TQ==", "message"=>{"author"=>"elliot", "text"=>"fewa"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "elliot"], ["text", "fewa"], ["created_at", "2021-06-11 18:37:06.975833"], ["updated_at", "2021-06-11 18:37:06.975833"]]
+  [1m[35m (13.6ms)[0m  commit transaction
+Completed 500 Internal Server Error in 2021ms (ActiveRecord: 13.9ms)
+
+ActionView::MissingTemplate (Missing template messages/create, application/create with {:locale=>[:en], :formats=>[:json, :js, :html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/elly/Desktop/App Academy/Javascript/JS Fundamentals/AJAX/chat_demo/app/views"
+):
+  actionview (4.2.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.8) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.8) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.8) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.8) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.8) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.8) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.8) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.8) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/elly/.rbenv/versions/2.5.1/lib/ruby/2.5.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.8) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.8) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.8) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.8) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.8) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.8) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.8) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.8) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.8) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.8) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.8) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+  puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+  puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+  puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+  puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/elly/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.2ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 11:41:41 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 2018ms (Views: 15.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/messages" for ::1 at 2021-06-11 11:41:48 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"nNF+rlmGsoxnqANaqde0jXaaIUAx3/OdjHQBbEKWGU9Ec96n0Jchdw2fhVG9Ptm7wAksSa3nv3I/m8mqRJTFVA==", "message"=>{"author"=>"elliot", "text"=>"finally!"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "elliot"], ["text", "finally!"], ["created_at", "2021-06-11 18:41:50.376306"], ["updated_at", "2021-06-11 18:41:50.376306"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Completed 200 OK in 2007ms (Views: 0.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/messages" for ::1 at 2021-06-11 11:42:43 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"nNF+rlmGsoxnqANaqde0jXaaIUAx3/OdjHQBbEKWGU9Ec96n0Jchdw2fhVG9Ptm7wAksSa3nv3I/m8mqRJTFVA==", "message"=>{"author"=>"elliot", "text"=>"finally!"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["author", "elliot"], ["text", "finally!"], ["created_at", "2021-06-11 18:42:45.006177"], ["updated_at", "2021-06-11 18:42:45.006177"]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 2016ms (Views: 0.3ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 11:44:54 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2052ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-17e4fba2a6e796038b22791f078a090fafa1e5d2226347f84233d16082af7de3.js?body=1" for ::1 at 2021-06-11 11:44:56 -0700
+
+
+Started POST "/messages" for ::1 at 2021-06-11 11:45:11 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"JfGkIYL1JqWicFHw1wGanZBpPyBwE5BEksQx6lVbFbX9UwQoC+S1XshH1/vD6PerJvoyKewr3KshK/ksU1nJrg==", "message"=>{"author"=>"elliot", "text"=>"omg"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["author", "elliot"], ["text", "omg"], ["created_at", "2021-06-11 18:45:13.766872"], ["updated_at", "2021-06-11 18:45:13.766872"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 2006ms (Views: 0.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 11:49:04 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2059ms (Views: 58.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-29d987faa6514775b58a35f53c569ec1c5450d0ce0ba16fb4e30391682c35ba6.css?body=1" for ::1 at 2021-06-11 11:49:06 -0700
+
+
+Started GET "/assets/bundle.self-2f589cfdb56736b4831bc9c762e257f83cbc4186c4907eb3625a9d31284c35c5.js?body=1" for ::1 at 2021-06-11 11:49:06 -0700
+
+
+Started POST "/messages" for ::1 at 2021-06-11 11:49:12 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"8nGZ4pUGGQcA9D435fDSjziw8/hV6FnjFUgGl3wi2AQq0znrHBeK/GrDuDzxGb+5jiP+8cnQFQymp85ReiAEHw==", "message"=>{"author"=>"elliot", "text"=>"whatttt"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["author", "elliot"], ["text", "whatttt"], ["created_at", "2021-06-11 18:49:14.484371"], ["updated_at", "2021-06-11 18:49:14.484371"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 2017ms (Views: 0.2ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 11:50:03 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2017ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-ae67a82f09efb378cbb372655ab2762681729ada5f0f85c192db958b39f87035.css?body=1" for ::1 at 2021-06-11 11:50:05 -0700
+
+
+Started POST "/messages" for ::1 at 2021-06-11 11:50:10 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"i8UXwt5tjYRpItO7AeLOe2e4FVjdi3ZIoy4caCjV7s1TZ7fLV3wefwMVVbAVC6NN0SsYUUGzOqcQwdSuLtcy1g==", "message"=>{"author"=>"elliot", "text"=>"noooo"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["author", "elliot"], ["text", "noooo"], ["created_at", "2021-06-11 18:50:12.213362"], ["updated_at", "2021-06-11 18:50:12.213362"]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 2008ms (Views: 0.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 11:50:20 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2028ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 11:59:03 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2072ms (Views: 70.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bundle.self-42660551f10e7dca4621209cd289e23f80288b29919b76e2f368a6618b443b73.js?body=1" for ::1 at 2021-06-11 11:59:05 -0700
+
+
+Started POST "/messages" for ::1 at 2021-06-11 11:59:11 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"cK8h7ftAmjGgRbsISm5OGiP75IeSn7n5U/6YRmncXF2oDYHkclEJyspyPQNehyMslWjpjg6n9RbgEVCAb96ARg==", "message"=>{"author"=>"elliot", "text"=>"finally!"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "elliot"], ["text", "finally!"], ["created_at", "2021-06-11 18:59:13.623366"], ["updated_at", "2021-06-11 18:59:13.623366"]]
+  [1m[35m (4.1ms)[0m  commit transaction
+Completed 200 OK in 2007ms (Views: 0.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 12:00:41 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2015ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/messages" for ::1 at 2021-06-11 12:00:49 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"TPuiY6AehTvdJnZAr8ioCid5Lpbx79/gAJqbXz44wMPjpaUI6N65vYx336h1OzXa6xsQ9FymGs0NkeelrXypjw==", "message"=>{"author"=>"elliot", "text"=>"welcome back"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "elliot"], ["text", "welcome back"], ["created_at", "2021-06-11 19:00:51.764201"], ["updated_at", "2021-06-11 19:00:51.764201"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Completed 200 OK in 2006ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 12:03:48 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2064ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-889ea4b4ad0819c4d89142e6b5e1c5545b6020a467d5e298a0002ed7e174d574.js?body=1" for ::1 at 2021-06-11 12:03:50 -0700
+
+
+Started POST "/messages" for ::1 at 2021-06-11 12:03:55 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"LCvRtE2AnROElqtwl3mdrsY3kr8c1GpEHYC0JOFOpymDddbfBUChldXHAphNigB+ClWs3bGdr2kQi8jecgrOZQ==", "message"=>{"author"=>"elliot", "text"=>"finally!"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "elliot"], ["text", "finally!"], ["created_at", "2021-06-11 19:03:57.147226"], ["updated_at", "2021-06-11 19:03:57.147226"]]
+  [1m[35m (4.9ms)[0m  commit transaction
+Completed 200 OK in 2008ms (Views: 0.3ms | ActiveRecord: 5.1ms)
