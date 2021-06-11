@@ -1,0 +1,1 @@
+(()=>{var t,s={837:t=>{var s=function(t){this.$messages=t.find("ul"),this.$form=t.find("form"),this.$form.on("submit",this.submitMessage())};s.prototype.submitMessage=function(){},t.exports=s}},r={};t=function t(o){var e=r[o];if(void 0!==e)return e.exports;var i=r[o]={exports:{}};return s[o](i,i.exports,t),i.exports}(837),$((function(){new t($(".chat"))}))})();

@@ -571,3 +571,84 @@ Started GET "/assets/application.self-a977fc5296ef1e5264bbba515a1f575bae80db6aee
 
 
 Started GET "/assets/bundle.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2021-06-11 10:01:19 -0700
+
+
+Started GET "/" for ::1 at 2021-06-11 10:03:54 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2025ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-ac48aa1f7e378756ceb779c9862442e0258203b21f8006e20c88a7346b8321dc.css?body=1" for ::1 at 2021-06-11 10:03:56 -0700
+
+
+Started GET "/" for ::1 at 2021-06-11 10:04:20 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2012ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-0122b287c8b2d61f5cb933711c78fe4f9f3981c560574ba310ca3926fe11a19a.css?body=1" for ::1 at 2021-06-11 10:04:22 -0700
+
+
+Started GET "/" for ::1 at 2021-06-11 10:04:36 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2013ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-fca06bb4db35df7e79d0e2f420339316b85e1c50219fac60d81f640b3fd8ac63.css?body=1" for ::1 at 2021-06-11 10:04:38 -0700
+
+
+Started GET "/" for ::1 at 2021-06-11 10:06:50 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2014ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 10:06:55 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2010ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 10:09:28 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2017ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-4ab1b6349accf0b9f2ddae2c52ebbc073b7e4577a166dff4944d8e7de1d5cd29.css?body=1" for ::1 at 2021-06-11 10:09:30 -0700
+
+
+Started GET "/" for ::1 at 2021-06-11 10:11:23 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (4.0ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 2054ms (Views: 49.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bundle.self-cce86aea4bf047ad2327d50a60126d12325ec7a0079743ab0ebf6186ef0ea9d2.js?body=1" for ::1 at 2021-06-11 10:11:25 -0700
+
+
+Started GET "/" for ::1 at 2021-06-11 11:22:35 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2011ms (Views: 10.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-06-11 11:29:55 -0700
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2055ms (Views: 54.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bundle.self-9ad3ecc1ddf25a53a095bedcc013db96f6f678a39a009eb87b82c3f69a7ade00.js?body=1" for ::1 at 2021-06-11 11:29:57 -0700

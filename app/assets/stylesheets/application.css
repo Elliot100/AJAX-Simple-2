@@ -20,3 +20,11 @@
   left: 0;
 }
 
+.chat {
+  width: 700px;
+  margin: 0 auto;
+  color: white;
+  background: black;
+  opacity: 0.5;
+}
+
